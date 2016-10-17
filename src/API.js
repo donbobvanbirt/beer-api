@@ -1,5 +1,5 @@
 import ServerActions from './actions/ServerActions'
-import { get } from 'axios'
+import { get, post } from 'axios'
 
 const API = {
   getRand() {
