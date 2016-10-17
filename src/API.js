@@ -3,7 +3,7 @@ import { get } from 'axios'
 
 const API = {
   getRand() {
-    console.log('in API.getRand');
+    // console.log('in API.getRand');
     get('/api/random')
     .then(res => {
       let { data } = res.data;
@@ -11,6 +11,12 @@ const API = {
       ServerActions.gotRand(data);
     })
     .catch(console.error)
+  },
+
+  favorite(id) {
+    post('/api/favorite', {
+      id
+    })
   }
 }
 

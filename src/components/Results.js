@@ -1,8 +1,7 @@
 import React , { Component } from 'react';
 import ReactDOM from 'react-dom';
 import BeerStore from '../stores/BeerStore'
-// import BeerActions from '../actions/BeerActions'
-// import { Segment , Label, Icon } from 'semantic-ui-react'
+import BeerActions from '../actions/BeerActions'
 
 export default class Results extends Component {
   constructor() {
@@ -30,7 +29,8 @@ export default class Results extends Component {
   }
 
   addToFavs(id) {
-    console.log('id', id);
+    // console.log('id', id);
+    BeerActions.favorite(id);
   }
 
   render() {
